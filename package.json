@@ -1,0 +1,34 @@
+{
+  "name": "antd-lazy-loading",
+  "version": "0.1.0",
+  "description": "Global loading indicator for antd, differd to show.",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "build": "rm -rf esm && rm -rf lib && npm run build:esm && npm run build:commonjs",
+    "build:commonjs": "cross-env BABEL_OUTPUT=commonjs babel src --out-dir lib/ --ignore **/__tests__,**/__mocks__",
+    "build:esm": "babel src --out-dir esm/ --ignore **/__tests__,**/__mocks__",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangsijie/antd-lazy-loading.git"
+  },
+  "keywords": [
+    "antd"
+  ],
+  "author": "wangsijie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangsijie/antd-lazy-loading/issues"
+  },
+  "homepage": "https://github.com/wangsijie/antd-lazy-loading#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.2.0"
+  }
+}
