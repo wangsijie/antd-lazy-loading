@@ -18,12 +18,11 @@ export const pushRequest = (text) => {
 };
 
 export const popRequest = () => {
-    if (request-- === 1) {
-        hideIndicator && hideIndicator();
-    }
+    request--;
+    hideIndicator && hideIndicator();
 };
 
-export const config = (_defaultText, _differTime) => {
+export const config = (_defaultText, _differTime = 300) => {
     defaultText = _defaultText;
     differTime = _differTime;
 };
