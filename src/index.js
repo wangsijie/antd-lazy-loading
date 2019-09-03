@@ -6,8 +6,7 @@ let differTime = 300;
 let defaultText = 'Loading';
 
 export const pushRequest = (text) => {
-    request++;
-    if (request === 1) {
+    if (request++ === 0) {
         hideIndicator = null;
         setTimeout(() => {
             if (request > 0) {
