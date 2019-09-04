@@ -6,7 +6,7 @@ let differTime = 300;
 let defaultText = 'Loading';
 
 export const pushRequest = (text) => {
-    if (request++ === 0) {
+    if (request === 0) {
         hideIndicator = null;
         setTimeout(() => {
             if (request > 0) {
@@ -14,10 +14,11 @@ export const pushRequest = (text) => {
             }
         }, differTime);
     }
+    request += 1;
 };
 
 export const popRequest = () => {
-    request--;
+    request -= 1;
     hideIndicator && hideIndicator();
 };
 
